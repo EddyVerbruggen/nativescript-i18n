@@ -2,7 +2,7 @@
   "name": "nativescript-i18n",
   "version": "0.0.1",
   "description": "An i18n nativescript plugin using native standards ",
-  "main": "index.js",
+  "main": "i18n.js",
   "nativescript": {
     "platforms": {
       "android": "1.7.1"
