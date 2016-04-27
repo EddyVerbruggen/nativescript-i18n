@@ -1,0 +1,1 @@
+# nativescript-i18n
