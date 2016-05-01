@@ -35,7 +35,8 @@ The following ideas to be implemented are inspired by [this comment](https://git
 
 - [x] Android implementation - use the native `strings.xml` in `App_Resources/Android/values/`
 - [ ] iOS implementation -  use the native `Localizable.strings` files (where do we need to put this files?)
-- [ ] Allow formatted strings, eg: `L('hello', 'world')` to transalte the definition `hello %s` (and/or other other types `%d`, etc)
+- [ ] Allow formatted strings, eg: `L('hello', 'world')` to translate the definition `hello %s` (and/or other other types `%d`, etc)
+- [ ] Possibly a cli tool/command to extract strings from our language function uses and put them into our strings.xml to be translated
 - [ ] Move the strings.xml files in `app/i18n` (exact folder structure to be decided) and use them as a base for the next points
   - Build a "transaltor" for the iOS (and windows?) format
   - Build a hook to move the files in the right place before compiling
