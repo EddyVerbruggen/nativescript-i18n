@@ -62,3 +62,4 @@ The following ideas to be implemented are inspired by [this comment](https://git
 - [ ] What about assets (images/splash screens/etc) ?
 - [ ] What about the app name? (or {N} takes care of it?)
 - [ ] Do we need a cache at the module level so we don't have to cross the native bridge everytime? (a benchmark should be done to decide this)
+- [ ] Make the cache aware of the current language and language change (**android:** https://docs.nativescript.org/cookbook/application#registering-a-broadcast-receiver-android, **iOS:** it shouldn't be needed as the app it's killed)
