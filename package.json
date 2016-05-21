@@ -8,8 +8,8 @@
 			"android": "1.7.1"
 		},
 		"hooks": [{
-			"type": "before-prepare",
-			"script": "lib/before-prepare.js",
+			"type": "after-prepare",
+			"script": "lib/after-prepare.js",
 			"inject": true
 		}]
 	},

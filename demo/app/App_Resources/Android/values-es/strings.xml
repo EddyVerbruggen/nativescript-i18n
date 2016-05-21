@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">demo</string>
+    <string name="title_activity_kimera">demo</string>
+    <string formatted="false" name="hello">Hola %s!</string>
+</resources>
