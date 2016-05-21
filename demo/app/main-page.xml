@@ -1,7 +1,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
   <StackLayout>
-    <Label text="{{ L('hello','my friend') }}" class="title" textWrap="true"/>
-    <Label text="{{ L('hello', 'with model value:' + helloValue) }}" class="title" textWrap="true"/>
-    <Label text="{{ message }}" class="title" textWrap="true"/>
+    <Label text="{{ L('hello','my friend') }}" class="title" textWrap="true" />
+	<Label text="{{ L('multi_replace','DIRECT REPLACEMENT', modelReplacement) }}" class="message" textWrap="true" />
+    <Label text="{{ message }}" class="message" textWrap="true"/>
   </StackLayout>
 </Page>

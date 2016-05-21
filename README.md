@@ -9,40 +9,71 @@ It is heavily inspired from [NativeLang](https://github.com/alejonext/NativeLang
 The plugin defines an `L()` method at the application level so it will be accessible both from the XML and JS files.
 
 ###Usage
+Create a folder `i18n` at the same level with `app` with the following structure:
 
-Just require `nativescript-i18n` and `globals` in app.js as early as possible (I do it even before I require the `application` module).
+~~~
+app
+i18n
+  |
+  |-- en
+  |		|- strings.xml
+  |	
+  |-- es
+  		|- strings.xml
+~~~ 		
+
+
+Require `nativescript-i18n` and `globals` in `app.js` as early as possible (I do it even before I require the `application` module, the very first 2 lines).
 
 ~~~
 	require('globals');
 	require('nativescript-i18n');
 ~~~
 
-And use it like this (full example to come):
+And in the code use it like this:
 
 ####XML files####
 
-~~~
-	<TabViewItem title="{{ L('tab_home') }}">
-	<TabViewItem title="{{ L('tab_with_args',theFirstReplacement, theSecondReplacement) }}">
-~~~
-
-Assuming you have defined in **strings.xml** the definitions and in the model the replacement `theFirstReplacement, theSecondReplacement` variables
+**Simple string**
 
 ~~~
-	<string name="tab_home">Home Tab</string>
-	<string formatted="false" name="tab_with_args">Args: %s %s</string>
+	<Label text="{{ L('hello') }}">
 ~~~
 
-**!IMPORTANT** -  for all the strings definitions that have a replacement you need to add `formatted=false`
+**It supports one or multiple replacements, directly or from the model**
+
+~~~
+	<Label text="{{ L('hello','my friend') }}" class="title" textWrap="true" />
+	<Label text title="{{ L('multi_replace','direct replacement', modelReplacement) }}">
+~~~
+
+Assuming you have defined in **strings.xml** the definitions and in the model the replacement `modelReplacement` variable
+
+~~~
+	<string name="hello">Hello!</string>
+	<string formatted="false" name="hello_replace">Hello %s!</string>
+	<string formatted="false" name="multi_replace">We can replace directly in xml: %s or from the model: %s</string>
+~~~
+
+####IMPORTANT !!####
+
+-  for all the strings definitions that have a replacement you need to add `formatted=false`
+-  It seems that we need to add in strings.xml the next two lines for the app to compile properly, **but this also makes the app name and the title of the initial activity on android** to be localized
+	
+	~~~
+	<string name="app_name">demo</string>
+	<string name="title_activity_kimera">demo</string>
+	~~~
+
 
 ####JS files####
 ~~~
-	console.log(L('tab_home'));
-	console.log(L('tab_with_args', 'ONE', 'TWO'));
-~~~	
+	console.log(L('home'));
+	console.log(L('multi_replace', 'ONE', 'TWO'));
+~~~
 
-
-
+####Demo####
+Please have  alook in the demo folder for a working example.
 
 
 
@@ -55,11 +86,10 @@ The following ideas to be implemented are inspired by [this comment](https://git
 - [ ] iOS implementation -  use the native `Localizable.strings` files (where do we need to put this files?)
 - [x] Allow formatted strings, eg: `L('hello', 'world')` to translate the definition `hello %s` (and/or other other types `%d`, etc)
 - [ ] Possibly a cli tool/command to extract strings from our language function uses and put them into our strings.xml to be translated
-- [ ] Move the strings.xml files in `app/i18n` (exact folder structure to be decided) and use them as a base for the next points
-  - Build a "transaltor" for the iOS (and windows?) format
-  - Build a hook to move the files in the right place before compiling
-  - Merge strings found in the `App_Resources/Android/values/` folder if needed and signal conflicts (and kill the build process)
+- [x] Move the strings.xml files in `app/i18n` (exact folder structure to be decided) and use them as a base for the next points
+  - [x] Build a hook to move the files in the right place before compiling for Android
+  - [ ] Build a hook to translate and move the files in the right place before compiling for iOS
 - [ ] What about assets (images/splash screens/etc) ?
-- [ ] What about the app name? (or {N} takes care of it?)
+- [ ] What about the app name? (or {N} takes care of it?) **done for android**
 - [ ] Do we need a cache at the module level so we don't have to cross the native bridge everytime? (a benchmark should be done to decide this)
 - [ ] Make the cache aware of the current language and language change (**android:** https://docs.nativescript.org/cookbook/application#registering-a-broadcast-receiver-android, **iOS:** it shouldn't be needed as the app it's killed)
