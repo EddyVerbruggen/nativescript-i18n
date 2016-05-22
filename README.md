@@ -9,10 +9,10 @@ It is heavily inspired from [NativeLang](https://github.com/alejonext/NativeLang
 The plugin defines an `L()` method at the application level so it will be accessible both from the XML and JS files.
 
 ###Usage
-Create a folder `i18n` at the same level with `app` with the following structure:
+Create a folder `i18n` in the `app` folder with the following structure:
 
 ~~~
-app
+App_Resources
 i18n
   |
   |-- en
