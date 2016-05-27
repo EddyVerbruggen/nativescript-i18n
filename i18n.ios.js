@@ -5,7 +5,7 @@ var format = require('format');
 var bundle = NSBundle.mainBundle();
 
 var L = function() {
-	arguments[0] = bundle.localizedStringForKeyValueTable(arguments[0],'', null);
+	arguments[0] = bundle.localizedStringForKeyValueTable(arguments[0], '', null);
 	return format.apply(this, arguments);
 };
 
