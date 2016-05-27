@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">{N} i18n en</string>
-    <string name="title_activity_kimera">demo i18 en</string>
+	<string name="app_name">{N} i18n en</string>
+	<string name="title_activity_kimera">demo i18 en</string>
 	<string name="hello">Hello!</string>
 	<string formatted="false" name="hello_replace">Hello %s!</string>
 	<string formatted="false" name="multi_replace">We can replace directly in xml: %s or from the model: %s</string>

@@ -1,0 +1,5 @@
+"app_name"="{N} i18n en";
+"title_activity_kimera"="demo i18 en";
+"hello"="Hello!";
+"hello_replace"="Hello %s!";
+"multi_replace"="We can replace directly in xml: %s or from the model: %s";

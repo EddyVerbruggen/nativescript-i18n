@@ -1,29 +1,39 @@
 {
-	"name": "nativescript-i18n",
-	"version": "0.0.2",
-	"description": "An i18n nativescript plugin using native standards",
-	"main": "i18n.js",
-	"nativescript": {
-		"platforms": {
-			"android": "1.7.1"
-		},
-		"hooks": [{
-			"type": "after-prepare",
-			"script": "lib/after-prepare.js",
-			"inject": true
-		}]
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"postinstall": "node postinstall.js",
-		"preuninstall": "node preuninstall.js"
-	},
-	"keywords": ["nativescript", "i18n"],
-	"author": "Dan Tamas",
-	"license": "MIT",
-	"dependencies": {
-		"format": "^0.2.2",
-		"fs-extra": "^0.30.0",
-		"nativescript-hook": "^0.2.0"
-	}
+  "name": "nativescript-i18n",
+  "version": "0.0.3",
+  "description": "An i18n nativescript plugin using native standards",
+  "main": "i18n.js",
+  "nativescript": {
+    "platforms": {
+      "android": "2.0.1",
+      "ios": "2.0.1"
+    },
+    "hooks": [
+      {
+        "type": "after-prepare",
+        "script": "lib/after-prepare.js",
+        "inject": true
+      }
+    ],
+    "tns-ios": {
+      "version": "2.0.0"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node postinstall.js",
+    "preuninstall": "node preuninstall.js"
+  },
+  "keywords": [
+    "nativescript",
+    "i18n"
+  ],
+  "author": "Dan Tamas",
+  "license": "MIT",
+  "dependencies": {
+    "format": "^0.2.2",
+    "fs-extra": "^0.30.0",
+    "nativescript-hook": "^0.2.0",
+    "xmldom": "^0.1.22"
+  }
 }

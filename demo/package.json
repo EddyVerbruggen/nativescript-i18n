@@ -13,8 +13,8 @@
 		}
 	},
 	"dependencies": {
-		"tns-core-modules": "2.0.0",
-		"nativescript-i18n": "file:../"
+		"nativescript-i18n": "file:../",
+		"tns-core-modules": "^2.0.1"
 	},
 	"devDependencies": {
 		"babel-traverse": "6.9.0",
