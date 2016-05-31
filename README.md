@@ -61,13 +61,13 @@ Assuming you have defined in **strings.xml** the definitions and in the model th
 ####IMPORTANT !!####
 
 -  for all the strings definitions that have a replacement you need to add `formatted=false`
--  It seems that we need to add in strings.xml the next two lines for the app to compile properly, **but this also makes the app name and the title of the initial activity on android** to be localized
+-  We need to add in strings.xml the next two lines for the app to compile properly which **also makes the app name localized on both ios and android and sets the title of the initial activity on android**
 
 	~~~
 	<string name="app_name">demo</string>
 	<string name="title_activity_kimera">demo</string>
 	~~~
-
+- **Sometimes you might need to fully delete the app from the device/sim for the plugin to fully work** (usually only when it's installed at a later stage of the development)
 
 ####JS files####
 ~~~
@@ -82,7 +82,7 @@ Please have a look in the `demo` folder for a working example.
 
 ### (pseudo) roadmap/ideas
 
-The following ideas to be implemented are inspired by [this comment](https://github.com/NativeScript/NativeScript/issues/42#issuecomment-169202040)
+The following ideas are inspired by [this comment](https://github.com/NativeScript/NativeScript/issues/42#issuecomment-169202040)
 
 
 - [x] Android implementation - use the native `strings.xml` in `App_Resources/Android/values/`
@@ -92,7 +92,7 @@ The following ideas to be implemented are inspired by [this comment](https://git
 - [x] Move the strings.xml files in `app/i18n` (exact folder structure to be decided) and use them as a base for the next points
   - [x] Build a hook to move the files in the right place before compiling for Android
   - [x] Build a hook to translate and move the files in the right place before compiling for iOS
-- [ ] What about assets (images/splash screens/etc) ?
-- [ ] What about the app name? (or {N} takes care of it?) **done for android**
+- [ ] What about assets (images/splash screens/etc) ? _might be out of scope of this plugin_
+- [x] What about the app name?
 - [ ] Do we need a cache at the module level so we don't have to cross the native bridge everytime? (a benchmark should be done to decide this)
 - [x] Make the cache aware of the current language and language change
