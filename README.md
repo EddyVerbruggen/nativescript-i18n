@@ -12,6 +12,13 @@ The plugin defines an `L()` method at the application level so it will be access
 Thanks to [@TheBrousse](https://twitter.com/TheBrousse) and [@ValioStoychev](https://twitter.com/valiostoychev) for the help with iOS and [@alejonext](https://github.com/alejonext/NativeLang) for creating the initial module.
 
 ###Usage
+Install the plugin in your app
+
+~~~
+npm install --save nativescript-i18n
+~~~
+
+
 Create a folder `i18n` in the `app` folder with the following structure:
 
 ~~~
