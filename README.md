@@ -53,7 +53,8 @@ And in the code use it like this:
 **It supports one or multiple replacements, directly or from the model**
 
 ~~~
-	<Label text="{{ L('hello','my friend') }}" class="title" textWrap="true" />
+	<Label text="{{ L('hello') }}" class="title" textWrap="true" />
+	<Label text="{{ L('hello_replace','my friend') }}" class="message" textWrap="true" />
 	<Label text title="{{ L('multi_replace','direct replacement', modelReplacement) }}">
 ~~~
 
