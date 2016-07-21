@@ -83,6 +83,12 @@ Assuming you have defined in **strings.xml** the definitions and in the model th
 	console.log(L('multi_replace', 'ONE', 'TWO'));
 ~~~
 
+####Angular####
+In case you use Angular for your app, things get a little more complicated. 
+My Angular skills are zero but [@alejonext](https://github.com/alejonext/NativeLang) has a solution for it in this [comment](https://github.com/rborn/nativescript-i18n/issues/2#issuecomment-233828647). 
+
+
+
 ####Demo####
 Please have a look in the `demo` folder for a working example.
 
