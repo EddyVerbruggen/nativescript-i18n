@@ -1,4 +1,4 @@
-require('nativescript-i18n');
+require('./i18n');
 import { Pipe, PipeTransform } from '@angular/core';
 /*
  * i18n
