@@ -1,3 +1,5 @@
+import * as i18nPlugin from './../';
+
 /**
  *
  */

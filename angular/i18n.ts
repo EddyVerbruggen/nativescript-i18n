@@ -1,4 +1,4 @@
-require("./../i18n");
+var i18nPlugin = require("./../i18n");
 
 import {provide, PLATFORM_PIPES} from '@angular/core';
 import {Pipe, PipeTransform} from '@angular/core';
@@ -9,4 +9,5 @@ export class i18n implements PipeTransform {
         return global.L(value, more);
     }
 }
+
 exports.I18N_PROVIDERS = [provide(PLATFORM_PIPES, {useValue: [i18n], multi: true})];
