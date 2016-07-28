@@ -84,8 +84,30 @@ Assuming you have defined in **strings.xml** the definitions and in the model th
 ~~~
 
 ####Angular####
-In case you use Angular for your app, things get a little more complicated. 
-My Angular skills are zero but [@alejonext](https://github.com/alejonext/NativeLang) has a solution for it in this [comment](https://github.com/rborn/nativescript-i18n/issues/2#issuecomment-233828647). 
+
+~~In case you use Angular for your app, things get a little more complicated.~~
+
+My Angular skills are zero but [@alejonext](https://github.com/alejonext/NativeLang) has a solution for it in this [comment](https://github.com/rborn/nativescript-i18n/issues/2#issuecomment-233828647).
+
+
+**Update 28.06.2016**
+
+[@AirMike](https://github.com/AirMike) and [@loloof64](https://github.com/loloof64) did a great job by testing and further improving [@alejonext's PR](https://github.com/rborn/nativescript-i18n/pull/6) so the plugin includes now support for Angular :bow:
+
+After you import the plugin in the app in the usual way just import the `nativescript-i18n/angular` provider in your file (main.ts)
+
+(Please be aware that the below intructions are in typescript not pure js)
+~~~
+	import {I18N_PROVIDERS} from "nativescript-i18n/angular";
+~~~
+@loloof64 suggested to also require `reflect-metadata` to avoid some android complains
+~~~
+	import "reflect-metadata";
+~~~
+and then bootstrap it as it follows
+~~~
+	nativeScriptBootstrap(AppComponent, [I18N_PROVIDERS]);
+~~~
 
 
 
