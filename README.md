@@ -109,6 +109,10 @@ and then bootstrap it as it follows
 	nativeScriptBootstrap(AppComponent, [I18N_PROVIDERS]);
 ~~~
 
+Angular usage is `{{ value | L:args }}`
+~~~
+	<Button text="{{ 'Login' | L }}"></Button>
+~~~
 
 
 ####Demo####
