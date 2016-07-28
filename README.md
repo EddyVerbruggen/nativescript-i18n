@@ -97,15 +97,19 @@ My Angular skills are zero but [@alejonext](https://github.com/alejonext/NativeL
 After you import the plugin in the app in the usual way just import the `nativescript-i18n/angular` provider in your file (main.ts)
 
 (Please be aware that the below intructions are in typescript not pure js)
+
 ~~~
 	import {I18N_PROVIDERS} from "nativescript-i18n/angular";
 ~~~
+
 and then bootstrap it as it follows
+
 ~~~
 	nativeScriptBootstrap(AppComponent, [I18N_PROVIDERS]);
 ~~~
 
 Angular usage is `{{ value | L:args }}`
+
 ~~~
 	<Button text="{{ 'Login' | L }}"></Button>
 ~~~
@@ -114,6 +118,7 @@ As for a more detailed example :
 
 You can put a code like this in your main.ts :
 
+~~~
     import {I18N_PROVIDERS} from 'nativescript-i18n/angular';
 
     import {nativeScriptBootstrap} from "nativescript-angular/application";
@@ -121,17 +126,21 @@ You can put a code like this in your main.ts :
     import {Explorer} from "./components/explorer/explorer";
 
     nativeScriptBootstrap(Explorer, [ I18N_PROVIDERS ]);
+~~~
 
 For the main component, let's say that the following html template is used (the strings definitions follow next):
 
+~~~
     <GridLayout rows="*,*,*">
         <label row="0" text="{{'menuitem_new_file' | L }}"></label>
         <label row="1" text="{{'menuitem_new_folder' | L }}"></label>
         <label row="2" text="{{'menuitem_new' | L:'---':'***':124.25693 }}"></label>
     </GridLayout>
+~~~
 
 And let's say that these are the string definitions for "en" (put in app/i18n/en/strings.xml)
 
+~~~
     <resources>
         <string name="app_name">Chess Exercices Cupboard</string>
         <string name="title_activity_kimera">Chess Exercices Cupboard</string>
@@ -140,9 +149,11 @@ And let's say that these are the string definitions for "en" (put in app/i18n/en
         <string name="menuitem_new_file">File</string>
         <string name="menuitem_new_folder">Folder</string>
     </resources>
+~~~
 
 And the french translations (put in app/i18n/fr/srings.xml)
 
+~~~
     <resources>
         <string name="app_name">Chess Exercices Cupboard</string>
         <string name="title_activity_kimera">Chess Exercices Cupboard</string>
@@ -151,18 +162,23 @@ And the french translations (put in app/i18n/fr/srings.xml)
         <string name="menuitem_new_file">Fichier</string>
         <string name="menuitem_new_folder">Dossier</string>
     </resources>
+~~~
 
 Then if your phone is configured for french you'll see something like this :
 
+~~~
     Fichier
     Dossier
     --- Nouveau... *** 124.25693
+~~~
 
 Or, if configured for english or "unrecognized" language :
 
+~~~
     File
     Folder
     --- New... *** 124.25693
+~~~
 
 ####Demo####
 Please have a look in the `demo` folder for a working example.
