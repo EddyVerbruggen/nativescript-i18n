@@ -4,21 +4,20 @@ import {provide, PLATFORM_PIPES} from '@angular/core';
 import {Pipe, PipeTransform} from '@angular/core';
 
 /**
- * i18n
  * Translate in angular
  * Usage:
- *   value | i18n:args
+ *   value | L:args
  * Example:
- *   {{ 'My text' |  i18n:10}}
+ *   {{ 'My text' |  L:10}}
  *   formats to: Mi text 10
  */
 @Pipe({
-	name: 'i18n'
+	name: 'L'
 })
-export class i18n implements PipeTransform {
+export class L implements PipeTransform {
     transform(value: string, more: string): string {
         return global.L(value, more);
     }
 }
 
-export const I18N_PROVIDERS = [provide(PLATFORM_PIPES, {useValue: [i18n], multi: true})];
+export const I18N_PROVIDERS = [provide(PLATFORM_PIPES, {useValue: [L], multi: true})];
