@@ -21,4 +21,4 @@ export class i18n implements PipeTransform {
     }
 }
 
-exports.I18N_PROVIDERS = [provide(PLATFORM_PIPES, {useValue: [i18n], multi: true})];
+export const I18N_PROVIDERS = [provide(PLATFORM_PIPES, {useValue: [i18n], multi: true})];
