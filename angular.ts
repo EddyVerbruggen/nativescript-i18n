@@ -1,4 +1,5 @@
 require('./i18n');
+import 'reflect-metadata';
 
 import {provide, PLATFORM_PIPES} from '@angular/core';
 import {Pipe, PipeTransform} from '@angular/core';
@@ -8,15 +9,16 @@ import {Pipe, PipeTransform} from '@angular/core';
  * Usage:
  *   value | L:args
  * Example:
- *   {{ 'My text' |  L:10}}
- *   formats to: Mi text 10
+ *   {{ 'My text' |  L:10:20.356}}
+ *   formats to: Mi text 10 and 20.356
+ *   if 'My text' is defined as <string name="My text" formatted="false">Mi text %d and %f</string>
  */
 @Pipe({
 	name: 'L'
 })
 export class L implements PipeTransform {
-    transform(value: string, more: string): string {
-        return global.L(value, more);
+    transform(value: string, ...more: string[]): string {
+        return global.L(value, ...more);
     }
 }
 
