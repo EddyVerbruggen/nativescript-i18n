@@ -1,4 +1,4 @@
-# nativescript-i18n (WIP)
+# nativescript-i18n
 
 This is a plugin for Nativescript that implements i18n in an easy manner.
 
