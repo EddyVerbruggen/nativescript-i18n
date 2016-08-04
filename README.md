@@ -8,6 +8,9 @@ It is heavily inspired from [NativeLang](https://github.com/alejonext/NativeLang
 
 The plugin defines an `L()` method at the application level so it will be accessible both from the XML and JS files.
 
+###! Please don't forget to read the [IMPORTANT section](https://github.com/rborn/nativescript-i18n#important-) ! :smile: ###
+
+
 ###Credits
 Thanks to [@TheBrousse](https://twitter.com/TheBrousse) and [@ValioStoychev](https://twitter.com/valiostoychev) for the help with iOS and [@alejonext](https://github.com/alejonext/NativeLang) for creating the initial module.
 
@@ -75,7 +78,7 @@ Assuming you have defined in **strings.xml** the definitions and in the model th
 	<string name="app_name">demo</string>
 	<string name="title_activity_kimera">demo</string>
 	~~~
-- **Sometimes you might need to fully delete the app from the device/sim for the plugin to fully work** (usually only when it's installed at a later stage of the development)
+- **Sometimes you might need to fully delete the app from the device/sim for the plugin to fully work** (usually only when the plugin is installed at a later stage of the project development)
 
 ####JS files####
 ~~~
@@ -201,3 +204,4 @@ The following ideas are inspired by [this comment](https://github.com/NativeScri
 - [x] What about the app name?
 - [ ] Do we need a cache at the module level so we don't have to cross the native bridge everytime? (a benchmark should be done to decide this)
 - [x] Make the cache aware of the current language and language change
+- [x] Angular support
