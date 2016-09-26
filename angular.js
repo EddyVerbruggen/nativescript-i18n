@@ -1,33 +1,33 @@
 "use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 require('./i18n');
+require('reflect-metadata');
 var core_1 = require('@angular/core');
-var core_2 = require('@angular/core');
 /**
  * Translate in angular
  * Usage:
  *   value | L:args
  * Example:
- *   {{ 'My text' |  L:10}}
- *   formats to: Mi text 10
+ *   {{ 'My text' |  L:10:20.356}}
+ *   formats to: Mi text 10 and 20.356
+ *   if 'My text' is defined as <string name="My text" formatted="false">Mi text %d and %f</string>
  */
 var L = (function () {
     function L() {
     }
-    L.prototype.transform = function (value, more) {
-        return global.L(value, more);
+    L.prototype.transform = function (value) {
+        var more = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            more[_i - 1] = arguments[_i];
+        }
+        return global.L.apply(global, [value].concat(more));
     };
     L = __decorate([
-        core_2.Pipe({
+        core_1.Pipe({
             name: 'L'
-        })
+        }), 
+        __metadata('design:paramtypes', [])
     ], L);
     return L;
 }());
 exports.L = L;
-exports.I18N_PROVIDERS = [core_1.provide(core_1.PLATFORM_PIPES, { useValue: [L], multi: true })];
+//# sourceMappingURL=angular.js.map
