@@ -30,4 +30,4 @@ var L = (function () {
     return L;
 }());
 exports.L = L;
-exports.I18N_PROVIDERS = [core_1.provide(core_1.PLATFORM_PIPES, { useValue: [L], multi: true })];
+//exports.I18N_PROVIDERS = [core_1.provide(core_1.PLATFORM_PIPES, { useValue: [L], multi: true })];

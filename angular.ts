@@ -22,4 +22,4 @@ export class L implements PipeTransform {
     }
 }
 
-export const I18N_PROVIDERS = [provide(PLATFORM_PIPES, {useValue: [L], multi: true})];
+//export const I18N_PROVIDERS = [provide(PLATFORM_PIPES, {useValue: [L], multi: true})];
