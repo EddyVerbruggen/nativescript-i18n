@@ -97,19 +97,27 @@ My Angular skills are zero but [@alejonext](https://github.com/alejonext/NativeL
 
 [@AirMike](https://github.com/AirMike) and [@loloof64](https://github.com/loloof64) did a great job by testing and further improving [@alejonext's PR](https://github.com/rborn/nativescript-i18n/pull/6) so the plugin includes now support for Angular :bow:
 
-After you import the plugin in the app in the usual way just import the `nativescript-i18n/angular` provider in your file (main.ts)
+After you import the plugin in the app in the usual way just import the `nativescript-i18n/angular` provider in your file (`app.module.ts`)
 
 (Please be aware that the below intructions are in typescript not pure js)
 
-~~~
-	import {I18N_PROVIDERS} from "nativescript-i18n/angular";
-~~~
 
-and then bootstrap it as it follows
+	import { L } from 'nativescript-i18n/angular';
 
-~~~
-	nativeScriptBootstrap(AppComponent, [I18N_PROVIDERS]);
-~~~
+
+and then bootstrap it as it follows (adding `L` as one of the entries in the `declarations` field of `@NgModule`)
+
+
+    @NgModule ({
+    ....
+        declarations :  [
+            AppComponent,
+            L , 
+          ... 
+       ], 
+    .... 
+    })
+
 
 Angular usage is `{{ value | L:args }}`
 
@@ -119,16 +127,36 @@ Angular usage is `{{ value | L:args }}`
 
 As for a more detailed example :
 
-You can put a code like this in your main.ts :
+You can put code like this in your `app.module.ts` :
 
 ~~~
-    import {I18N_PROVIDERS} from 'nativescript-i18n/angular';
-
-    import {nativeScriptBootstrap} from "nativescript-angular/application";
-    // (The following import is just a component designed as the main application component.)
-    import {Explorer} from "./components/explorer/explorer";
-
-    nativeScriptBootstrap(Explorer, [ I18N_PROVIDERS ]);
+    import { L } from 'nativescript-i18n/angular';
+    
+    import { NativeScriptModule } from "nativescript-angular/platform";
+    import { NgModule } from "@angular/core";
+    import { NativeScriptFormsModule } from "nativescript-angular/forms";
+    import { NativeScriptHttpModule } from "nativescript-angular/http";
+    import { NativeScriptRouterModule } from "nativescript-angular/router";
+    
+    import { AppComponent } from "./app.component";
+    import { routes, navigatableComponents } from "./app.routing";
+    
+    @NgModule({
+      imports: [
+        NativeScriptModule,
+        NativeScriptFormsModule,
+        NativeScriptHttpModule,
+        NativeScriptRouterModule,
+        NativeScriptRouterModule.forRoot(routes)
+      ],
+      declarations: [
+        AppComponent,
+        L,
+        ...navigatableComponents,
+      ],
+      bootstrap: [AppComponent],
+    })
+    export class AppModule {}
 ~~~
 
 For the main component, let's say that the following html template is used (the strings definitions follow next):
