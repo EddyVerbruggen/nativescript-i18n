@@ -1,7 +1,7 @@
 require('./i18n');
 import 'reflect-metadata';
 
-import {Pipe, PipeTransform} from '@angular/core';
+import {Pipe, PipeTransform, NgModule} from '@angular/core';
 
 /**
  * Translate in angular
@@ -15,8 +15,14 @@ import {Pipe, PipeTransform} from '@angular/core';
 @Pipe({
 	name: 'L'
 })
-export class L implements PipeTransform {
+class L implements PipeTransform {
     transform(value: string, ...more: string[]): string {
         return global.L(value, ...more);
     }
 }
+
+@NgModule({
+    declarations: [ L ],
+    exports: [ L ]
+})
+export class NativeScriptI18nModule { }

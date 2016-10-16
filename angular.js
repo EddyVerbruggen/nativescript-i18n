@@ -1,4 +1,10 @@
 "use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 require('./i18n');
 require('reflect-metadata');
 var core_1 = require('@angular/core');
@@ -24,10 +30,19 @@ var L = (function () {
     L = __decorate([
         core_1.Pipe({
             name: 'L'
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], L);
     return L;
 }());
-exports.L = L;
-//# sourceMappingURL=angular.js.map
+var NativeScriptI18nModule = (function () {
+    function NativeScriptI18nModule() {
+    }
+    NativeScriptI18nModule = __decorate([
+        core_1.NgModule({
+            declarations: [L],
+            exports: [L]
+        })
+    ], NativeScriptI18nModule);
+    return NativeScriptI18nModule;
+}());
+exports.NativeScriptI18nModule = NativeScriptI18nModule;
