@@ -6,15 +6,15 @@
 	"nativescript": {
 		"id": "org.nativescript.nativescripti18ndemo",
 		"tns-ios": {
-			"version": "2.3.0"
+			"version": "2.4.0"
 		},
 		"tns-android": {
-			"version": "2.3.0"
+			"version": "2.4.1"
 		}
 	},
 	"dependencies": {
 		"nativescript-i18n": "file:../",
-		"tns-core-modules": "*"
+		"tns-core-modules": "2.4.2"
 	},
 	"devDependencies": {
 		"babel-traverse": "6.9.0",
