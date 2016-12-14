@@ -72,6 +72,7 @@ Assuming you have defined in **strings.xml** the definitions and in the model th
 ####IMPORTANT !!####
 
 -  for all the strings definitions that have a replacement you need to add `formatted=false`
+-  quotes and apostrophes need to be escaped `<string name="with_quotes">Apostrophe: \' and quotes: \"</string>`
 -  We need to add in strings.xml the next two lines for the app to compile properly which **also makes the app name localized on both ios and android and sets the title of the initial activity on android**
 
 	~~~
