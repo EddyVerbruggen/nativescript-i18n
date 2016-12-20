@@ -22,5 +22,8 @@
 		"babylon": "6.8.0",
 		"filewalker": "0.1.2",
 		"lazy": "1.0.11"
+	},
+	"nativescript-i18n": {
+		"customLangPath": "app/resources/i18n"
 	}
 }
