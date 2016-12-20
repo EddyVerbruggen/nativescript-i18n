@@ -228,5 +228,5 @@ The following ideas are inspired by [this comment](https://github.com/NativeScri
 - [ ] Do we need a cache at the module level so we don't have to cross the native bridge everytime? (a benchmark should be done to decide this)
 - [x] Make the cache aware of the current language and language change
 - [x] Angular support
-- [ ] Custom path for the language files (#28)
-- [ ] Set default language for app (#11)
+- [ ] Custom path for the language files ([#28](https://github.com/rborn/nativescript-i18n/issues/28))
+- [ ] Set default language for app ([#11](https://github.com/rborn/nativescript-i18n/issues/11))
