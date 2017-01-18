@@ -1,32 +1,32 @@
 {
-  "name": "nativescript-i18n",
-  "version": "0.1.0",
-  "description": "An i18n nativescript plugin using native standards",
-  "main": "i18n.js",
-  "nativescript": {
-    "platforms": {
-      "android": "2.4.1",
-      "ios": "2.4.0"
-    },
-    "hooks": [
-      {
-        "type": "before-prepare",
-        "script": "lib/before-prepare.js",
-        "inject": true
+    "name": "nativescript-i18n",
+    "version": "0.1.0",
+    "description": "An i18n nativescript plugin using native standards",
+    "main": "i18n.js",
+    "nativescript": {
+      "platforms": {
+        "android": "2.4.1",
+        "ios": "2.4.0"
+      },
+     "hooks": [
+        {
+          "type": "before-prepare",
+          "script": "lib/before-prepare.js",
+          "inject": true
+       }
+      ],
+      "tns-ios": {
+        "version": "2.4.0"
+      },
+      "tns-android": {
+        "version": "2.4.1"
       }
-    ],
-    "tns-ios": {
-      "version": "2.4.0"
-    },
-    "tns-android": {
-      "version": "2.4.1"
-    }
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node postinstall.js",
-    "preuninstall": "node preuninstall.js"
-  },
+   },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "postinstall": "node postinstall.js",
+      "preuninstall": "node preuninstall.js"
+   },
   "keywords": [
     "nativescript",
     "i18n"

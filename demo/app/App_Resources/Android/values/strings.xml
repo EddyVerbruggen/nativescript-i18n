@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">{N} i18n en</string>
-	<string name="title_activity_kimera">demo i18 en</string>
-	<string name="hello">Hello!</string>
-	<string formatted="false" name="hello_replace">Hello %s! with single apostrophes \' and quotes \"</string>
-	<string formatted="false" name="multi_replace">"We can replace directly in xml: %s or from the model: %s"</string>
+	<string name="app_name">{N} i18n es</string>
+	<string name="title_activity_kimera">demo i18 es</string>
+	<string name="hello">Hola!</string>
+	<string formatted="false" name="hello_replace">Hola %s! con comillas simples \' y dobles \"</string>
+	<string formatted="false" name="multi_replace">Se puede sustituir directamente en xml: %s o desde el modelo: %s</string>
 </resources>
