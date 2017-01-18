@@ -24,6 +24,7 @@
 		"lazy": "1.0.11"
 	},
 	"nativescript-i18n": {
+		"customLangPath": "app/resources/i18n",
 		"defaultLang": "es"
 	}
 }
