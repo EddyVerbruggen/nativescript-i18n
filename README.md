@@ -69,6 +69,14 @@ Assuming you have defined in **strings.xml** the definitions and in the model th
 	<string formatted="false" name="multi_replace">We can replace directly in xml: %s or from the model: %s</string>
 ~~~
 
+Language defaults to english if the phone's language doesn't match any of your defined languages. If you want to set your own default language, add this configuration to your project's package.json
+
+~~~
+"nativescript-i18n": {
+    "defaultLang": "es"
+}
+~~~
+
 ####IMPORTANT !!####
 
 -  for all the strings definitions that have a replacement you need to add `formatted=false`
