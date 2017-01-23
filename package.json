@@ -1,6 +1,6 @@
 {
   "name": "nativescript-i18n",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An i18n nativescript plugin using native standards",
   "main": "i18n.js",
   "nativescript": {
