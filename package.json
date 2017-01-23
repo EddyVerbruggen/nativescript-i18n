@@ -35,8 +35,8 @@
   "license": "MIT",
   "dependencies": {
     "format": "^0.2.2",
-    "fs-extra": "^0.30.0",
     "nativescript-hook": "^0.2.1",
+    "plist": "^2.0.1",
     "xmldom": "^0.1.22"
   }
 }
