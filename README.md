@@ -69,7 +69,19 @@ Assuming you have defined in **strings.xml** the definitions and in the model th
 	<string formatted="false" name="multi_replace">We can replace directly in xml: %s or from the model: %s</string>
 ~~~
 
+
+To define a custom path for the i18n files (other than `App_Resources/i18n`), add this configuration to your project's package.json
+
+~~~
+"nativescript-i18n": {
+    "customLangPath": "app/resources/i18n"
+}
+~~~
+
+
 Language defaults to english if the phone's language doesn't match any of your defined languages. If you want to set your own default language, add this configuration to your project's package.json
+
+**Keep in mind that on iOS the language picked by the device will be based on the order in** `Settings` -> `Language & Region` -> `Preferred language order`
 
 ~~~
 "nativescript-i18n": {
@@ -236,5 +248,5 @@ The following ideas are inspired by [this comment](https://github.com/NativeScri
 - [ ] Do we need a cache at the module level so we don't have to cross the native bridge everytime? (a benchmark should be done to decide this)
 - [x] Make the cache aware of the current language and language change
 - [x] Angular support
-- [ ] Custom path for the language files ([#28](https://github.com/rborn/nativescript-i18n/issues/28))
-- [ ] Set default language for app ([#11](https://github.com/rborn/nativescript-i18n/issues/11))
+- [x] Custom path for the language files ([#28](https://github.com/rborn/nativescript-i18n/issues/28))
+- [x] Set default language for app ([#11](https://github.com/rborn/nativescript-i18n/issues/11))
