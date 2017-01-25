@@ -250,3 +250,4 @@ The following ideas are inspired by [this comment](https://github.com/NativeScri
 - [x] Angular support
 - [x] Custom path for the language files ([#28](https://github.com/rborn/nativescript-i18n/issues/28))
 - [x] Set default language for app ([#11](https://github.com/rborn/nativescript-i18n/issues/11))
+- [ ] Report errors on case some files could not be created

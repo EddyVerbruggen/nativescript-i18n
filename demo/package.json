@@ -1,30 +1,30 @@
 {
-	"description": "NativeScript Application",
-	"license": "SEE LICENSE IN <your-license-filename>",
-	"readme": "NativeScript Application",
-	"repository": "<fill-your-repository-here>",
-	"nativescript": {
-		"id": "org.nativescript.nativescripti18ndemo",
-		"tns-ios": {
-			"version": "2.4.0"
-		},
-		"tns-android": {
-			"version": "2.4.1"
-		}
-	},
-	"dependencies": {
-		"nativescript-i18n": "file:../",
-		"tns-core-modules": "2.4.2"
-	},
-	"devDependencies": {
-		"babel-traverse": "6.9.0",
-		"babel-types": "6.9.0",
-		"babylon": "6.8.0",
-		"filewalker": "0.1.2",
-		"lazy": "1.0.11"
-	},
-	"nativescript-i18n": {
-		"customLangPath": "app/resources/i18n",
-		"defaultLang": "es"
-	}
+  "description": "Demo for nativescript-i18n plugin",
+  "license": "MIT",
+  "readme": "Demo for nativescript-i18n plugin",
+  "repository": "https://github.com/rborn/nativescript-i18n",
+  "nativescript": {
+    "id": "org.nativescript.nativescripti18ndemo",
+    "tns-ios": {
+      "version": "2.4.0"
+    },
+    "tns-android": {
+      "version": "2.4.1"
+    }
+  },
+  "dependencies": {
+    "nativescript-i18n": "^0.1.2",
+    "tns-core-modules": "2.4.2"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.9.0",
+    "babel-types": "6.9.0",
+    "babylon": "6.8.0",
+    "filewalker": "0.1.2",
+    "lazy": "1.0.11"
+  },
+  "nativescript-i18n": {
+    "customLangPath": "app/resources/i18n",
+    "defaultLang": "es"
+  }
 }
