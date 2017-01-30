@@ -15,7 +15,7 @@ var L = function() {
 			arguments[0] = resources.getString(resID);
 			return format.apply(this, arguments);
 		}
-		return '';
+		return arguments[0];
 	}
 };
 
