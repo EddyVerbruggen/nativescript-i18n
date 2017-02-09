@@ -14,6 +14,8 @@ The plugin defines an `L()` method at the application level so it will be access
 ###Credits
 Thanks to [@TheBrousse](https://twitter.com/TheBrousse) and [@ValioStoychev](https://twitter.com/valiostoychev) for the help with iOS and [@alejonext](https://github.com/alejonext/NativeLang) for creating the initial module.
 
+Also a big thanks to all the [contributors](https://github.com/rborn/nativescript-i18n/graphs/contributors) that made this repo better :)
+
 ###Usage
 Install the plugin in your app
 
@@ -130,13 +132,13 @@ and then import it in your app module
 
 ~~~
 	@NgModule({
-    
-     
+
+
       imports: [
         NativeScriptI18nModule
       ]
-      
-      
+
+
     })
     export class AppModule { }
 ~~~
@@ -153,21 +155,21 @@ You can put a code like this in your main.ts :
 
 ~~~
     import { NativeScriptI18nModule } from 'nativescript-i18n/angular';
-    
+
     import { NativeScriptModule } from "nativescript-angular/platform";
     import { NgModule } from "@angular/core";
     import { AppComponent } from "./app.component";
 
 
     @NgModule({
-         
+
       imports: [
         NativeScriptModule,
         NativeScriptI18nModule
       ],
-    
+
       declarations: [
-        AppComponent,  
+        AppComponent,
       ],
       bootstrap: [AppComponent]
     })
