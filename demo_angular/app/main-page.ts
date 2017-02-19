@@ -8,8 +8,8 @@ export class MainPageComponent implements OnInit {
     message: String;
     modelReplacement: String;
     ngOnInit() {
-        this.message = global.L('hello_replace', 'from model');
-        this.modelReplacement = 'MODEL REPLACEMENT';
+        this.message = global.L('hello_replace', 'from component');
+        this.modelReplacement = 'COMPONENT REPLACEMENT';
     
     }
 }
