@@ -1,5 +1,5 @@
 "app_name"="{N} i18n es";
 "title_activity_kimera"="demo i18 es";
 "hello"="Hola!";
-"hello_replace"="Hola %s!";
+"hello_replace"="Hola %s! con comillas simples \' y dobles \"";
 "multi_replace"="Se puede sustituir directamente en xml: %s o desde el modelo: %s";

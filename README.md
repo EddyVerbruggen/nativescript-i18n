@@ -14,6 +14,8 @@ The plugin defines an `L()` method at the application level so it will be access
 ###Credits
 Thanks to [@TheBrousse](https://twitter.com/TheBrousse) and [@ValioStoychev](https://twitter.com/valiostoychev) for the help with iOS and [@alejonext](https://github.com/alejonext/NativeLang) for creating the initial module.
 
+Also a big thanks to all the [contributors](https://github.com/rborn/nativescript-i18n/graphs/contributors) that made this repo better :)
+
 ###Usage
 Install the plugin in your app
 
@@ -69,9 +71,30 @@ Assuming you have defined in **strings.xml** the definitions and in the model th
 	<string formatted="false" name="multi_replace">We can replace directly in xml: %s or from the model: %s</string>
 ~~~
 
+
+To define a custom path for the i18n files (other than `App_Resources/i18n`), add this configuration to your project's package.json
+
+~~~
+"nativescript-i18n": {
+    "customLangPath": "app/resources/i18n"
+}
+~~~
+
+
+Language defaults to english if the phone's language doesn't match any of your defined languages. If you want to set your own default language, add this configuration to your project's package.json
+
+**Keep in mind that on iOS the language picked by the device will be based on the order in** `Settings` -> `Language & Region` -> `Preferred language order`
+
+~~~
+"nativescript-i18n": {
+    "defaultLang": "es"
+}
+~~~
+
 ####IMPORTANT !!####
 
 -  for all the strings definitions that have a replacement you need to add `formatted=false`
+-  quotes and apostrophes need to be escaped `<string name="with_quotes">Apostrophe: \' and quotes: \"</string>`
 -  We need to add in strings.xml the next two lines for the app to compile properly which **also makes the app name localized on both ios and android and sets the title of the initial activity on android**
 
 	~~~
@@ -109,13 +132,13 @@ and then import it in your app module
 
 ~~~
 	@NgModule({
-    
-     
+
+
       imports: [
         NativeScriptI18nModule
       ]
-      
-      
+
+
     })
     export class AppModule { }
 ~~~
@@ -132,21 +155,21 @@ You can put a code like this in your main.ts :
 
 ~~~
     import { NativeScriptI18nModule } from 'nativescript-i18n/angular';
-    
+
     import { NativeScriptModule } from "nativescript-angular/platform";
     import { NgModule } from "@angular/core";
     import { AppComponent } from "./app.component";
 
 
     @NgModule({
-         
+
       imports: [
         NativeScriptModule,
         NativeScriptI18nModule
       ],
-    
+
       declarations: [
-        AppComponent,  
+        AppComponent,
       ],
       bootstrap: [AppComponent]
     })
@@ -227,3 +250,6 @@ The following ideas are inspired by [this comment](https://github.com/NativeScri
 - [ ] Do we need a cache at the module level so we don't have to cross the native bridge everytime? (a benchmark should be done to decide this)
 - [x] Make the cache aware of the current language and language change
 - [x] Angular support
+- [x] Custom path for the language files ([#28](https://github.com/rborn/nativescript-i18n/issues/28))
+- [x] Set default language for app ([#11](https://github.com/rborn/nativescript-i18n/issues/11))
+- [ ] Report errors on case some files could not be created
