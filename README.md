@@ -102,6 +102,7 @@ Language defaults to english if the phone's language doesn't match any of your d
 	<string name="title_activity_kimera">demo</string>
 	~~~
 - **Sometimes you might need to fully delete the app from the device/sim for the plugin to fully work** (usually only when the plugin is installed at a later stage of the project development)
+- If you get TypeScript complaining about L not being defined, then put `/// <reference path="./node_modules/nativescript-i18n/references.d.ts" /> Nativescript i18n` in your `references.d.ts`.
 
 ####JS files####
 ~~~
