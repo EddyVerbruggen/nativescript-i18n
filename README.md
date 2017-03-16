@@ -1,6 +1,6 @@
 # nativescript-i18n
 
-This is a plugin for Nativescript that implements i18n in an easy manner.
+This is a plugin for Nativescript that implements **i18n** in an easy manner.
 
 It uses the native capabilities of each platform without the need of a separate JS or JSON file.
 
@@ -8,15 +8,17 @@ It is heavily inspired from [NativeLang](https://github.com/alejonext/NativeLang
 
 The plugin defines an `L()` method at the application level so it will be accessible both from the XML and JS files.
 
-###! Please don't forget to read the [IMPORTANT section](https://github.com/rborn/nativescript-i18n#important-) ! :smile: ###
+**! Please don't forget to read the [IMPORTANT section](https://github.com/rborn/nativescript-i18n#important-) ! :smile:**
 
 
-###Credits
+**Credits**
+
 Thanks to [@TheBrousse](https://twitter.com/TheBrousse) and [@ValioStoychev](https://twitter.com/valiostoychev) for the help with iOS and [@alejonext](https://github.com/alejonext/NativeLang) for creating the initial module.
 
 Also a big thanks to all the [contributors](https://github.com/rborn/nativescript-i18n/graphs/contributors) that made this repo better :)
 
-###Usage
+**Usage**
+
 Install the plugin in your app
 
 ~~~
@@ -47,7 +49,7 @@ Require `nativescript-i18n` and `globals` in `app.js` as early as possible (I do
 
 And in the code use it like this:
 
-####XML files####
+**XML files**
 
 **Simple string**
 
@@ -91,7 +93,7 @@ Language defaults to english if the phone's language doesn't match any of your d
 }
 ~~~
 
-####IMPORTANT !!####
+**IMPORTANT !!**
 
 -  for all the strings definitions that have a replacement you need to add `formatted=false`
 -  quotes and apostrophes need to be escaped `<string name="with_quotes">Apostrophe: \' and quotes: \"</string>`
@@ -104,13 +106,14 @@ Language defaults to english if the phone's language doesn't match any of your d
 - **Sometimes you might need to fully delete the app from the device/sim for the plugin to fully work** (usually only when the plugin is installed at a later stage of the project development)
 - If you get TypeScript complaining about L not being defined, then put `/// <reference path="./node_modules/nativescript-i18n/references.d.ts" /> Nativescript i18n` in your `references.d.ts`.
 
-####JS files####
+**JS files**
+
 ~~~
 	console.log(L('home'));
 	console.log(L('multi_replace', 'ONE', 'TWO'));
 ~~~
 
-####Angular####
+**Angular**
 
 ~~In case you use Angular for your app, things get a little more complicated.~~
 
@@ -229,36 +232,37 @@ Or, if configured for english or "unrecognized" language :
     --- New... *** 124.25693
 ~~~
 
-####Demo####
+**Demo**
+
 Please have a look in the `demo` folder for a working example.
 
-### iOS Permission text
+**iOS Permission text**
 
-Add this special keys to app/i18n/(lang)/strings.xml. To notify user, in configured language while showing permission alerts.
+Add this special keys to `app/i18n/(lang)/strings.xml` used to notify user, in configured language while showing permission alerts.
 
-| Key                                       | Description of key   |  
-| ----------------------------------------- | ---------------------| 
-|NSAppleMusicUsageDescription               | Specifies the reason for your app to use the media library|   
-|NSBluetoothPeripheralUsageDescription      | Specifies the reason for your app to use Bluetooth|   
-|NSCalendarsUsageDescription                | Specifies the reason for your app to access the user’s calendars|   
-|NSCameraUsageDescription                   | Specifies the reason for your app to access the device’s camera|     
-|NSContactsUsageDescription                 | Specifies the reason for your app to access the user’s contacts|   
-|NSHealthShareUsageDescription              | Specifies the reason for your app to read the user’s health data|    
-|NSHealthUpdateUsageDescription             | Specifies the reason for your app to make changes to the user’s health data|   
-|NSHomeKitUsageDescription                  | Specifies the reason for your app to access the user’s HomeKit configuration data|   
-|NSLocationAlwaysUsageDescription           | Specifies the reason for your app to access the user’s location information at all times|   
-|NSLocationWhenInUseUsageDescription        | Specifies the reason for your app to access the user’s location information while your app is in use|   
-|NSMicrophoneUsageDescription               | Specifies the reason for your app to access any of the device’s microphones|   
-|NSMotionUsageDescription                   | Specifies the reason for your app to access the device’s accelerometer|   
-|NSPhotoLibraryUsageDescription             | Specifies the reason for your app to access the user’s photo library|     
-|NSRemindersUsageDescription                | Specifies the reason for your app to access the user’s reminders|    
-|NSSiriUsageDescription                     | Specifies the reason for your app to send user data to Siri|  
-|NSSpeechRecognitionUsageDescription        | Specifies the reason for your app to send user data to Apple’s speech recognition servers|       
+| Key                                       | Description of key   |
+| ----------------------------------------- | ---------------------|
+|NSAppleMusicUsageDescription               | Specifies the reason for your app to use the media library|
+|NSBluetoothPeripheralUsageDescription      | Specifies the reason for your app to use Bluetooth|
+|NSCalendarsUsageDescription                | Specifies the reason for your app to access the user’s calendars|
+|NSCameraUsageDescription                   | Specifies the reason for your app to access the device’s camera|
+|NSContactsUsageDescription                 | Specifies the reason for your app to access the user’s contacts|
+|NSHealthShareUsageDescription              | Specifies the reason for your app to read the user’s health data|
+|NSHealthUpdateUsageDescription             | Specifies the reason for your app to make changes to the user’s health data|
+|NSHomeKitUsageDescription                  | Specifies the reason for your app to access the user’s HomeKit configuration data|
+|NSLocationAlwaysUsageDescription           | Specifies the reason for your app to access the user’s location information at all times|
+|NSLocationWhenInUseUsageDescription        | Specifies the reason for your app to access the user’s location information while your app is in use|
+|NSMicrophoneUsageDescription               | Specifies the reason for your app to access any of the device’s microphones|
+|NSMotionUsageDescription                   | Specifies the reason for your app to access the device’s accelerometer|
+|NSPhotoLibraryUsageDescription             | Specifies the reason for your app to access the user’s photo library|
+|NSRemindersUsageDescription                | Specifies the reason for your app to access the user’s reminders|
+|NSSiriUsageDescription                     | Specifies the reason for your app to send user data to Siri|
+|NSSpeechRecognitionUsageDescription        | Specifies the reason for your app to send user data to Apple’s speech recognition servers|
 
 
-### (pseudo) roadmap/ideas
+**(Pseudo) roadmap/ideas**
 
-The following ideas are inspired by [this comment](https://github.com/NativeScript/NativeScript/issues/42#issuecomment-169202040)
+The following ideas are inspired by [this comment](https://github.com/NativeScript/NativeScript/issues/42#issuecomment-169202040) and issues posted by  the users of this plugin
 
 
 - [x] Android implementation - use the native `strings.xml` in `App_Resources/Android/values/`
@@ -275,5 +279,5 @@ The following ideas are inspired by [this comment](https://github.com/NativeScri
 - [x] Angular support
 - [x] Custom path for the language files ([#28](https://github.com/rborn/nativescript-i18n/issues/28))
 - [x] Set default language for app ([#11](https://github.com/rborn/nativescript-i18n/issues/11))
-- [x] Show translations on app permission alerts ([#45](https://github.com/rborn/nativescript-i18n/issues/45))
+- [x] Show translations on app permission alerts on iOS ([#45](https://github.com/rborn/nativescript-i18n/issues/45))
 - [ ] Report errors on case some files could not be created
