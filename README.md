@@ -232,6 +232,28 @@ Or, if configured for english or "unrecognized" language :
 ####Demo####
 Please have a look in the `demo` folder for a working example.
 
+### iOS Permission text
+
+Add this special keys to app/i18n/(lang)/strings.xml. To notify user, in configured language while showing permission alerts.
+
+| Key                                       | Description of key   |  
+| ----------------------------------------- | ---------------------| 
+|NSAppleMusicUsageDescription               | Specifies the reason for your app to use the media library|   
+|NSBluetoothPeripheralUsageDescription      | Specifies the reason for your app to use Bluetooth|   
+|NSCalendarsUsageDescription                | Specifies the reason for your app to access the user’s calendars|   
+|NSCameraUsageDescription                   | Specifies the reason for your app to access the device’s camera|     
+|NSContactsUsageDescription                 | Specifies the reason for your app to access the user’s contacts|   
+|NSHealthShareUsageDescription              | Specifies the reason for your app to read the user’s health data|    
+|NSHealthUpdateUsageDescription             | Specifies the reason for your app to make changes to the user’s health data|   
+|NSHomeKitUsageDescription                  | Specifies the reason for your app to access the user’s HomeKit configuration data|   
+|NSLocationAlwaysUsageDescription           | Specifies the reason for your app to access the user’s location information at all times|   
+|NSLocationWhenInUseUsageDescription        | Specifies the reason for your app to access the user’s location information while your app is in use|   
+|NSMicrophoneUsageDescription               | Specifies the reason for your app to access any of the device’s microphones|   
+|NSMotionUsageDescription                   | Specifies the reason for your app to access the device’s accelerometer|   
+|NSPhotoLibraryUsageDescription             | Specifies the reason for your app to access the user’s photo library|     
+|NSRemindersUsageDescription                | Specifies the reason for your app to access the user’s reminders|    
+|NSSiriUsageDescription                     | Specifies the reason for your app to send user data to Siri|  
+|NSSpeechRecognitionUsageDescription        | Specifies the reason for your app to send user data to Apple’s speech recognition servers|       
 
 
 ### (pseudo) roadmap/ideas
@@ -253,4 +275,5 @@ The following ideas are inspired by [this comment](https://github.com/NativeScri
 - [x] Angular support
 - [x] Custom path for the language files ([#28](https://github.com/rborn/nativescript-i18n/issues/28))
 - [x] Set default language for app ([#11](https://github.com/rborn/nativescript-i18n/issues/11))
+- [x] Show translations on app permission alerts ([#45](https://github.com/rborn/nativescript-i18n/issues/45))
 - [ ] Report errors on case some files could not be created
