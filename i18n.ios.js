@@ -1,14 +1,14 @@
 require('globals');
-var application = require("application");
-var format = require('format');
-var utils = require("utils/utils");
+const application = require("tns-core-modules/application");
+const utils = require("tns-core-modules/utils/utils");
+const format = require('format');
 
-var bundle = utils.ios.getter(NSBundle, NSBundle.mainBundle);
+const bundle = utils.ios.getter(NSBundle, NSBundle.mainBundle);
 
-var L = function() {
-	arguments[0] = bundle.localizedStringForKeyValueTable(arguments[0], '', null);
-	return format.apply(this, arguments);
+const L = function () {
+    arguments[0] = bundle.localizedStringForKeyValueTable(arguments[0], '', null);
+    return format.apply(this, arguments);
 };
 
-application.resources.L = L;
+application.setResources({ L: L });
 global.L = L;
