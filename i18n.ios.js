@@ -10,5 +10,5 @@ var L = function() {
 	return format.apply(this, arguments);
 };
 
-application.resources.L = L;
+application.setResources(L);
 global.L = L;
