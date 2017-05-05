@@ -19,5 +19,8 @@ var L = function() {
 	}
 };
 
-application.resources.L = L;
+var applicationResources = application.getResources();
+applicationResources.L = L;
+application.setResources(applicationResources);
+
 global.L = L;

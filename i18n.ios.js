@@ -10,5 +10,8 @@ var L = function() {
 	return format.apply(this, arguments);
 };
 
-application.resources.L = L;
+var applicationResources = application.getResources();
+applicationResources.L = L;
+application.setResources(applicationResources);
+
 global.L = L;
