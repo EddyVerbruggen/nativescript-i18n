@@ -5,9 +5,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-require('./i18n');
-require('reflect-metadata');
-var core_1 = require('@angular/core');
+exports.__esModule = true;
+var application = require("tns-core-modules/application");
+require("./i18n");
+require("reflect-metadata");
+var core_1 = require("@angular/core");
 /**
  * Translate in angular
  * Usage:
@@ -25,24 +27,26 @@ var L = (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             more[_i - 1] = arguments[_i];
         }
-        return global.L.apply(global, [value].concat(more));
+        return (_a = application.getResources()).L.apply(_a, [value].concat(more));
+        var _a;
     };
-    L = __decorate([
-        core_1.Pipe({
-            name: 'L'
-        })
-    ], L);
     return L;
 }());
+L = __decorate([
+    core_1.Pipe({
+        name: 'L'
+    })
+], L);
+exports.L = L;
 var NativeScriptI18nModule = (function () {
     function NativeScriptI18nModule() {
     }
-    NativeScriptI18nModule = __decorate([
-        core_1.NgModule({
-            declarations: [L],
-            exports: [L]
-        })
-    ], NativeScriptI18nModule);
     return NativeScriptI18nModule;
 }());
+NativeScriptI18nModule = __decorate([
+    core_1.NgModule({
+        declarations: [L],
+        exports: [L]
+    })
+], NativeScriptI18nModule);
 exports.NativeScriptI18nModule = NativeScriptI18nModule;
