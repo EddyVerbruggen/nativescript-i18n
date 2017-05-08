@@ -35,8 +35,10 @@
   "license": "MIT",
   "dependencies": {
     "format": "^0.2.2",
+    "globals": "^9.17.0",
     "nativescript-hook": "^0.2.1",
     "plist": "^2.1.0",
+    "tns-core-modules": "^3.0.0",
     "xmldom": "^0.1.27"
   }
 }

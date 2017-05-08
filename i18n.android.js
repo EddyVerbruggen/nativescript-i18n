@@ -1,26 +1,25 @@
 require('globals');
-var application = require("application");
-var format = require('format');
-var utils = require('utils/utils');
+const application = require("tns-core-modules/application");
+const utils = require('tns-core-modules/utils/utils');
+const format = require('format');
 
-var context = utils.ad.getApplicationContext();
-var packageName = context.getPackageName();
-var resources = context.getResources();
+const context = utils.ad.getApplicationContext();
+const packageName = context.getPackageName();
+const resources = context.getResources();
 
-var L = function() {
-	if (resources && arguments.length) {
-		var resID = resources.getIdentifier(arguments[0], "string", packageName);
+const L = function () {
+    if (resources && arguments.length) {
+        let resID = resources.getIdentifier(arguments[0], "string", packageName);
 
-		if (resID != 0) {
-			arguments[0] = resources.getString(resID);
-			return format.apply(this, arguments);
-		}
-		return arguments[0];
-	}
+        if (resID != 0) {
+            arguments[0] = resources.getString(resID);
+            return format.apply(this, arguments);
+        }
+        return arguments[0];
+    }
 };
 
 var applicationResources = application.getResources();
 applicationResources.L = L;
 application.setResources(applicationResources);
-
 global.L = L;
