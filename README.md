@@ -93,7 +93,7 @@ Language defaults to english if the phone's language doesn't match any of your d
 }
 ~~~
 
-**IMPORTANT**
+### **IMPORTANT**
 
 -  for all the strings definitions that have a replacement you need to add `formatted=false`
 -  quotes and apostrophes need to be escaped `<string name="with_quotes">Apostrophe: \' and quotes: \"</string>`
