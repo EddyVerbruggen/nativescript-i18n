@@ -281,3 +281,5 @@ The following ideas are inspired by [this comment](https://github.com/NativeScri
 - [x] Set default language for app ([#11](https://github.com/rborn/nativescript-i18n/issues/11))
 - [x] Show translations on app permission alerts on iOS ([#45](https://github.com/rborn/nativescript-i18n/issues/45))
 - [ ] Report errors on case some files could not be created
+- [ ] Webpack support ([#49](https://github.com/rborn/nativescript-i18n/issues/49), [#42](https://github.com/rborn/nativescript-i18n/issues/42))
+
