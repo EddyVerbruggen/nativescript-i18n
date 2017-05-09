@@ -19,5 +19,7 @@ const L = function () {
     }
 };
 
-application.setResources({ L: L });
+var applicationResources = application.getResources();
+applicationResources.L = L;
+application.setResources(applicationResources);
 global.L = L;
