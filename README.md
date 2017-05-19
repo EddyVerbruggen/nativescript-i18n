@@ -47,7 +47,7 @@ Require `nativescript-i18n` and `globals` in `app.js` as early as possible (I do
 	require('nativescript-i18n');
 ~~~
 
-If you use TypeScript and want to use `L()` in the code you will need to cast the `global` var to `any` like belowin the file you intend to use `L()`. You can read more about this in #57 
+If you use TypeScript and want to use `L()` in the code you will need to cast the `global` var to `any` like belowin the file you intend to use `L()`. You can read more about this in https://github.com/rborn/nativescript-i18n/issues/57
 
 ~~~
 	declare var global:any;
