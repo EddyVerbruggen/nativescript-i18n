@@ -9,7 +9,7 @@ const resources = context.getResources();
 
 const L = function () {
     if (resources && arguments.length) {
-        let resID = resources.getIdentifier(arguments[0], "string", packageName);
+        var resID = resources.getIdentifier(arguments[0], "string", packageName);
 
         if (resID != 0) {
             arguments[0] = resources.getString(resID);
