@@ -1,3 +1,13 @@
+---
+
+# Maintainer wanted! #
+I moved away from NativeScript so I'm looking for somebody to take ownership of the plugin and continue the development of it.
+I don't really have time to take care of it anymore so more than sure it will slowly die.
+
+Please [contact](https://github.com/rborn/nativescript-i18n/issues/67) me if you are willing to help!
+
+---
+
 # nativescript-i18n
 
 This is a plugin for Nativescript that implements **i18n** in an easy manner.
