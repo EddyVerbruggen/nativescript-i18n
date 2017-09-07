@@ -1,12 +1,12 @@
 {
   "name": "nativescript-i18n",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "An i18n nativescript plugin using native standards",
   "main": "i18n",
   "nativescript": {
     "platforms": {
-      "android": "3.0.0",
-      "ios": "3.0.0"
+      "android": "3.1.1",
+      "ios": "3.1.0"
     },
     "hooks": [
       {
@@ -16,10 +16,10 @@
       }
     ],
     "tns-ios": {
-      "version": "3.0.0"
+      "version": "3.1.0"
     },
     "tns-android": {
-      "version": "3.0.0"
+      "version": "3.1.1"
     }
   },
   "scripts": {
@@ -39,7 +39,7 @@
     "globals": "^9.17.0",
     "nativescript-hook": "^0.2.1",
     "plist": "^2.1.0",
-    "tns-core-modules": "^3.0.0",
+    "tns-core-modules": "^3.1.1",
     "xmldom": "^0.1.27"
   }
 }
