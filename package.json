@@ -33,7 +33,7 @@
     ],
     "author": "Dan Tamas",
     "license": "MIT",
-    "repository": "rborn/nativescript-i18n",
+    "repository": "EddyVerbruggen/nativescript-i18n",
     "dependencies": {
         "format": "^0.2.2",
         "globals": "^9.17.0",
