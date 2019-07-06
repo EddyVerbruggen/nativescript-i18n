@@ -1,13 +1,3 @@
----
-
-# Maintainer wanted! #
-I moved away from NativeScript so I'm looking for somebody to take ownership of the plugin and continue the development of it.
-I don't really have time to take care of it anymore so more than sure it will slowly die.
-
-Please [contact](https://github.com/rborn/nativescript-i18n/issues/67) me if you are willing to help!
-
----
-
 # nativescript-i18n
 
 This is a plugin for Nativescript that implements **i18n** in an easy manner.
@@ -22,6 +12,8 @@ The plugin defines an `L()` method at the application level so it will be access
 
 
 **Credits**
+
+> Most thanks goes out to [Dan Tamas (@rborn)](https://github.com/rborn) for developing and maintaining this plugin in the past. When he had to abandon it due to shifted priorities, he was kind enough to [move the repo to me](https://github.com/EddyVerbruggen/nativescript-i18n/issues/67).
 
 Thanks to [@TheBrousse](https://twitter.com/TheBrousse) and [@ValioStoychev](https://twitter.com/valiostoychev) for the help with iOS and [@alejonext](https://github.com/alejonext/NativeLang) for creating the initial module.
 
