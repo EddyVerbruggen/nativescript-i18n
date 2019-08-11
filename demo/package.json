@@ -4,24 +4,25 @@
   "readme": "Demo for nativescript-i18n plugin",
   "repository": "https://github.com/rborn/nativescript-i18n",
   "nativescript": {
-    "id": "org.nativescript.nativescripti18ndemo",
+    "id": "org.nativescript.plugindemo.i18n",
     "tns-ios": {
-      "version": "3.1.0"
+      "version": "6.0.1"
     },
     "tns-android": {
-      "version": "3.1.1"
+      "version": "6.0.1"
     }
   },
   "dependencies": {
     "nativescript-i18n": "file:../",
-    "tns-core-modules": "3.1.1"
+    "tns-core-modules": "~6.0.0"
   },
   "devDependencies": {
     "babel-traverse": "6.9.0",
     "babel-types": "6.9.0",
     "babylon": "6.8.0",
     "filewalker": "0.1.2",
-    "lazy": "1.0.11"
+    "lazy": "1.0.11",
+    "nativescript-dev-webpack": "1.0.1"
   },
   "nativescript-i18n": {
     "customLangPath": "app/resources/i18n",

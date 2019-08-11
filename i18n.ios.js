@@ -1,9 +1,10 @@
+/// <reference path="./node_modules/tns-platform-declarations/ios.d.ts" />
+
 require('globals');
 const application = require("tns-core-modules/application");
-const utils = require("tns-core-modules/utils/utils");
 const format = require('format');
 
-const bundle = utils.ios.getter(NSBundle, NSBundle.mainBundle);
+const bundle = NSBundle.mainBundle;
 
 const L = function () {
     arguments[0] = bundle.localizedStringForKeyValueTable(arguments[0], '', null);

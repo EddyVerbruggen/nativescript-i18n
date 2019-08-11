@@ -1,8 +1,8 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-	<StackLayout>
-		<Label text="{{ L('hello') }}" class="title" textWrap="true"/>
-		<Label text="{{ L('hello_replace','my friend') }}" class="message" textWrap="true"/>
-		<Label text="{{ L('multi_replace','DIRECT REPLACEMENT', modelReplacement) }}" class="message" textWrap="true"/>
-		<Label text="{{ message }}" class="message" textWrap="true"/>
-	</StackLayout>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+    <StackLayout>
+        <Label text="{{ L('hello') }}" class="title" textWrap="true"/>
+        <Label text="{{ L('hello_replace','my friend') }}" class="message" textWrap="true"/>
+        <Label text="{{ L('multi_replace','DIRECT REPLACEMENT', modelReplacement) }}" class="message" textWrap="true"/>
+        <Label text="{{ message }}" class="message" textWrap="true"/>
+    </StackLayout>
 </Page>

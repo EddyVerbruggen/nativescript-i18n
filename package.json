@@ -1,47 +1,42 @@
 {
-    "name": "nativescript-i18n",
-    "version": "0.3.0",
-    "description": "An i18n nativescript plugin using native standards",
-    "main": "i18n",
-    "nativescript": {
-        "platforms": {
-            "android": "3.1.1",
-            "ios": "3.1.0"
-        },
-        "hooks": [
-            {
-                "type": "before-prepare",
-                "script": "lib/before-prepare.js",
-                "inject": true
-            }
-        ],
-        "tns-ios": {
-            "version": "3.1.0"
-        },
-        "tns-android": {
-            "version": "3.1.1"
-        }
+  "name": "nativescript-i18n",
+  "version": "0.4.0",
+  "description": "An i18n nativescript plugin using native standards",
+  "main": "i18n",
+  "nativescript": {
+    "platforms": {
+      "android": "3.1.1",
+      "ios": "3.1.0"
     },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "postinstall": "node postinstall.js",
-        "preuninstall": "node preuninstall.js"
-    },
-    "keywords": [
-        "nativescript",
-        "i18n"
-    ],
-    "author": "Dan Tamas",
-    "license": "MIT",
-    "repository": "EddyVerbruggen/nativescript-i18n",
-    "dependencies": {
-        "format": "^0.2.2",
-        "globals": "^9.17.0",
-        "nativescript-hook": "^0.2.1",
-        "plist": "^2.1.0",
-        "xmldom": "^0.1.27"
-    },
-    "devDependencies": {
-        "tns-core-modules": "^3.1.1"
-    }
+    "hooks": [
+      {
+        "type": "before-prepare",
+        "script": "lib/before-prepare.js",
+        "inject": true
+      }
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node postinstall.js",
+    "preuninstall": "node preuninstall.js"
+  },
+  "keywords": [
+    "nativescript",
+    "i18n"
+  ],
+  "author": "Eddy Verbruggen",
+  "license": "MIT",
+  "repository": "EddyVerbruggen/nativescript-i18n",
+  "dependencies": {
+    "format": "^0.2.2",
+    "globals": "^9.17.0",
+    "nativescript-hook": "~0.2.5",
+    "plist": "^2.1.0",
+    "xmldom": "^0.1.27"
+  },
+  "devDependencies": {
+    "tns-core-modules": "~6.0.0",
+    "tns-platform-declarations": "~6.0.0"
+  }
 }
