@@ -1,4 +1,3 @@
-import * as application from 'tns-core-modules/application';
 import './i18n';
 import 'reflect-metadata';
 

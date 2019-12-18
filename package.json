@@ -36,7 +36,7 @@
     "xmldom": "^0.1.27"
   },
   "devDependencies": {
-    "tns-core-modules": "~6.0.0",
-    "tns-platform-declarations": "~6.0.0"
+    "tns-core-modules": "^6.0.0",
+    "tns-platform-declarations": "^6.0.0"
   }
 }
