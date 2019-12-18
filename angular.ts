@@ -18,7 +18,7 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 })
 export class L implements PipeTransform {
     transform(value: string, ...more: string[]): string {
-        return application.getResources().L(value, ...more);
+        return global["L"](value, ...more);
     }
 }
 
@@ -26,6 +26,4 @@ export class L implements PipeTransform {
     declarations: [L],
     exports: [L]
 })
-
-
 export class NativeScriptI18nModule { }
