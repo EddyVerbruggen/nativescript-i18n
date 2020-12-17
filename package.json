@@ -31,7 +31,7 @@
   "dependencies": {
     "format": "^0.2.2",
     "globals": "^9.17.0",
-    "nativescript-hook": "~0.2.5",
+    "@nativescript/hook": "~2.0.0",
     "plist": "^2.1.0",
     "xmldom": "^0.1.27"
   },
