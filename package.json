@@ -33,7 +33,7 @@
     "globals": "^9.17.0",
     "nativescript-hook": "~0.2.5",
     "plist": "^2.1.0",
-    "xmldom": "^0.1.27"
+    "xmldom": "^0.5.0"
   },
   "devDependencies": {
     "tns-core-modules": "^6.0.0",
