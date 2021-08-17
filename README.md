@@ -1,4 +1,4 @@
-# nativescript-i18n
+# nativescript-i18n(+NS7 support)
 
 This is a plugin for Nativescript that implements **i18n** in an easy manner.
 
