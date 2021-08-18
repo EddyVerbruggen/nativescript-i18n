@@ -1,7 +1,7 @@
 /// <reference path="./node_modules/tns-platform-declarations/ios.d.ts" />
 
 require('globals');
-const application = require("tns-core-modules/application");
+import { getResources, setResources } from "@nativescript/core/application";
 const format = require('format');
 
 const bundle = NSBundle.mainBundle;
@@ -11,7 +11,7 @@ const L = function () {
     return format.apply(this, arguments);
 };
 
-var applicationResources = application.getResources();
+var applicationResources = getResources();
 applicationResources.L = L;
-application.setResources(applicationResources);
+setResources(applicationResources);
 global.L = L;

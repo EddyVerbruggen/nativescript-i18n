@@ -1,9 +1,9 @@
 require('globals');
-const application = require("tns-core-modules/application");
-const utils = require('tns-core-modules/utils/utils');
 const format = require('format');
+import { ad } from "@nativescript/core/utils";
+import { getResources, setResources } from "@nativescript/core/application";
 
-const context = utils.ad.getApplicationContext();
+const context = ad.getApplicationContext();
 const packageName = context.getPackageName();
 const resources = context.getResources();
 
@@ -11,7 +11,7 @@ const L = function () {
     if (resources && arguments.length) {
         var resID = resources.getIdentifier(arguments[0], "string", packageName);
 
-        if (resID != 0) {
+        if (resID !== 0) {
             arguments[0] = resources.getString(resID);
             return format.apply(this, arguments);
         }
@@ -19,7 +19,7 @@ const L = function () {
     }
 };
 
-var applicationResources = application.getResources();
+var applicationResources = getResources();
 applicationResources.L = L;
-application.setResources(applicationResources);
+setResources(applicationResources);
 global.L = L;
