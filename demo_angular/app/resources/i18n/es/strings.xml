@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">{N} ng i18n es</string>
+	<string name="title_activity_kimera">ng demo i18 es</string>
+	<string name="hello">Hola!</string>
+	<string formatted="false" name="hello_replace">Hola %s! con comillas simples \' y dobles \"</string>
+	<string formatted="false" name="multi_replace">Se puede sustituir directamente en html: %s o desde el modelo: %s</string>
+</resources>
