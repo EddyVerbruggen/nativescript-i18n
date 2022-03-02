@@ -32,7 +32,7 @@
     "format": "^0.2.2",
     "globals": "^9.17.0",
     "@nativescript/hook": "~2.0.0",
-    "plist": "^2.1.0",
+    "plist": "^3.0.4",
     "xmldom": "^0.1.27"
   },
   "devDependencies": {
